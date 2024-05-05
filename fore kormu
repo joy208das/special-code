@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int main() {
+
+    char sl[1001];
+    fgets(sl,sizeof(sl),stdin);
+
+int s=0;
+int b=0;
+int i=0;
+while(sl[i]!='\0'){
+
+
+
+    if(sl[i]>='a' && sl[i]<='z') s++;
+    else  b++;
+
+     i++;
+
+     if(s>=b-1) strlwr(sl);
+else sl[i]=toupper(sl[i]);
+
+}
+printf("%d\n",b);
+
+printf("%s\n",sl);
+
+
+
+    return 0;
+}
