@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    getchar(); // Consume the newline character left in the input buffer after scanf
+
+    char sl[10];
+
+    for (int i = 0; i < n; i++) {
+        gets(sl);
+
+        // Convert the string to uppercase
+        for (int j = 0; sl[j] != '\0'; j++) {
+            sl[j] = toupper(sl[j]);
+        }
+
+        // Compare the uppercase string with "YES"
+        if (strcmp(sl, "YES") == 0) {
+            printf("YES\n");
+        } else {
+            printf("NO\n");
+        }
+    }
+
+    return 0;
+}
